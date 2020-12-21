@@ -26,3 +26,8 @@ I'm not sure why speech has room for two values
 
 ## Usage
 Demo usage can be found in `demo.py`. Make sure to change the MAC address
+
+## Requirements
+Tested with Python 3.9. Not expected to work outside Linux  
+`pygatt`  
+`pybluez`  
