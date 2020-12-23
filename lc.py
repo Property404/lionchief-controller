@@ -39,6 +39,8 @@ class LionChief:
     def set_speed(self, speed):
         self._send_cmd([0x45, speed])
 
+    def set_reverse(self, on):
+        self._send_cmd([0x46, 0x02 if on else 0x01])
 
     def __del__(self):
         if self._adapter:

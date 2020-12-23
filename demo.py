@@ -33,8 +33,20 @@ while True:
     time.sleep(2)
     chief.set_horn(False)
 
-    # Keep training along for 20 more seconds
-    time.sleep(20)
+    # Keep training along
+    time.sleep(10)
+
+    # Reverse 
+    ramp(6,0)
+    chief.set_reverse(True)
+    ramp(0,6)
+    time.sleep(10)
+
+    # Back to normal
+    ramp(6,0)
+    chief.set_reverse(False)
+    ramp(0,6)
+    time.sleep(40)
 
     # This is our stop
     chief.set_bell(True)
