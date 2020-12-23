@@ -20,9 +20,9 @@ Horn stop : `48 00`
 Bell start: `47 01`  
 Bell stop : `47 00`  
 Speech    : `4d 00 00`  
-Set speed : `45 <0x00-0x1f>`  
-Forward   : `46 0x01`  
-Reverse   : `46 0x02`  
+Set speed : `45 <00-1f>`  
+Forward   : `46 01`  
+Reverse   : `46 02`  
 
 I'm not sure why speech has room for two values
 
