@@ -19,12 +19,14 @@ Horn start: `48 01`
 Horn stop : `48 00`  
 Bell start: `47 01`  
 Bell stop : `47 00`  
-Speech    : `4d 00 00`  
+Speech    : `4d XX 00`  
 Set speed : `45 <00-1f>`  
 Forward   : `46 01`  
 Reverse   : `46 02`  
 
-I'm not sure why speech has room for two values
+If the first parameter of the speech command is 0, the saying will be random.
+Otherwise, each value corresponds to a specific saying. Not sure what the
+second parameter does.
 
 ## Usage
 Demo usage can be found in `demo.py`. Make sure to change the MAC address
