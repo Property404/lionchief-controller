@@ -23,10 +23,21 @@ Speech    : `4d XX 00`
 Set speed : `45 <00-1f>`  
 Forward   : `46 01`  
 Reverse   : `46 02`  
+Disconnect: `4b 0 0`  
+Set master volume: `4b <00-07>`  
+Set steam chuff volume: `4c <00-07>`  
+Set horn volume/pitch:  `44 01 <00-0f> <fe-02>`  
+Set bell volume/pitch: `44 02 <00-0f> <fe-02>`  
+Set speech volume/pitch: `44 03 <00-0f> <fe-02>`  
+Set engine volume/pitch: `44 04 <00-0f> <fe-02>`  
+Set lights off: `51 00`  
+Set lights on: `51 01`  
 
 If the first parameter of the speech command is 0, the saying will be random.
 Otherwise, each value corresponds to a specific saying. Not sure what the
 second parameter does.
+
+
 
 ## Usage
 Demo usage can be found in `demo.py`. Make sure to change the MAC address
