@@ -34,10 +34,15 @@ Set lights off: `51 00`
 Set lights on: `51 01`  
 
 If the first parameter of the speech command is 0, the saying will be random.
-Otherwise, each value corresponds to a specific saying. Not sure what the
+Otherwise each value corresponds to a specific saying. Not sure what the
 second parameter does.
 
 
+## Troubleshooting
+* Note that the speaker for at least some (if not all) Lionel trains is in the
+tender; if it's not hooked up, the train will not make any sounds
+* Some values like pitch are signed. Negative values are represented in 2's
+compliment
 
 ## Usage
 Demo usage can be found in `demo.py`. Make sure to change the MAC address
