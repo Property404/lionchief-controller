@@ -6,6 +6,7 @@ import time
 chief = LionChief("44:A6:E5:41:AE:72")
 chief.set_bell_pitch(1)
 
+
 # Gracefully start or stop
 def ramp(start_speed, end_speed):
     speed = start_speed
@@ -15,8 +16,9 @@ def ramp(start_speed, end_speed):
             speed -= 1
         else:
             speed += 1
-        time.sleep(.2)
+        time.sleep(0.2)
     chief.set_speed(end_speed)
+
 
 while True:
     # Let the conductor say something
@@ -36,23 +38,22 @@ while True:
     # Keep training along
     time.sleep(10)
 
-    # Reverse 
-    ramp(6,0)
+    # Reverse
+    ramp(6, 0)
     chief.set_reverse(True)
-    ramp(0,6)
+    ramp(0, 6)
     time.sleep(10)
 
     # Back to normal
-    ramp(6,0)
+    ramp(6, 0)
     chief.set_reverse(False)
-    ramp(0,6)
+    ramp(0, 6)
     time.sleep(40)
 
     # This is our stop
     chief.set_bell(True)
     time.sleep(1)
-    ramp(6,0)
+    ramp(6, 0)
     time.sleep(1)
     chief.set_bell(False)
     time.sleep(180)
-
