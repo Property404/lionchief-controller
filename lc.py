@@ -22,6 +22,9 @@ class LionChief:
         values.append(checksum)
         self._device.char_write(UUID25, bytes(values))
 
+    def set_light(self, on):
+        self._send_cmd([0x51, 1 if on else 0])
+
     def set_horn(self, on):
         self._send_cmd([0x48, 1 if on else 0])
 
